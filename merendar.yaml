@@ -1,0 +1,12 @@
+metadata:
+  name: Merendar
+  description: Se merienda a las 18:00
+automations:
+  - starters:
+      - type: time.schedule
+        at: 18:00
+    actions:
+      - type: assistant.command.Broadcast
+        devices:
+          - GoogleHomeMini - Comedor
+        message: Son las 18 horas. Es la hora de merendar
