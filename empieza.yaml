@@ -1,0 +1,20 @@
+metadata:
+  name: Empieza
+  description: Empieza el dia
+automations:
+  - starters:
+      - type: time.schedule
+        at: SUNRISE
+    actions:
+      - type: assistant.command.Broadcast
+        devices: GoogleHomeMini - Comedor
+        message: "Buenos días. Aquí tienes la información para hoy"
+      - type: assistant.command.OkGoogle
+        devices: GoogleHomeMini - Comedor
+        okGoogle: "Dime el tiempo"
+      - type: assistant.command.OkGoogle
+        devices: GoogleHomeMini - Comedor
+        okGoogle: " Dime mis tareas pendientes para hoy"
+      - type: assistant.command.OkGoogle
+        devices: GoogleHomeMini - Comedor
+        okGoogle: "¿Cómo está el tráfico al trabajo?"
