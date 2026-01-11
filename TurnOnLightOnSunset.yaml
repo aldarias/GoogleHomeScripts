@@ -1,0 +1,14 @@
+metadata:
+  name: Turn on all lights at sunset
+  description: Turn on all lights at sunset
+automations:
+  - starters:
+      - type: time.schedule
+        at: SUNSET
+    actions:
+      - type: device.command.OnOff
+        devices:
+          - Hue1 - salón
+          - Hue2 - salón
+          - salón Lights - salón
+        on: true

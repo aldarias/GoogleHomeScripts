@@ -1,0 +1,12 @@
+metadata:
+  name: Almorzar
+  description: Avisar que es hora de almorzar a las 11:00
+automations:
+  - starters:
+      - type: time.schedule
+        at: 11:00
+    actions:
+      - type: assistant.command.Broadcast
+        devices:
+          - GoogleHomeMini - Comedor
+        message: Son las 11 horas. Es la hora de almorzar

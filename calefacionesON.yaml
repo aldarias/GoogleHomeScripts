@@ -1,0 +1,19 @@
+metadata:
+  name: Calefacciones ON
+  description: Enciende los enchufes Tapo de la calefacción mediante comando de voz.
+
+automations:
+  - starters:
+      - type: assistant.event.OkGoogle
+        eventData: query
+        is: "Calefacciones on"
+
+    actions:
+      - type: device.command.OnOff
+        devices:
+          - TapoBaño - Baño
+          - TapoDespacho - Despacho
+          - TapoDormitorio - dormitorio
+          - TapoLaura - Laura
+          - TapoComedor - Comedor
+        on: true
